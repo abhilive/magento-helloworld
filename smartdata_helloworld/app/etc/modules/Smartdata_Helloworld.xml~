@@ -1,0 +1,8 @@
+<config>
+  <modules>
+    <Smartdata_Helloworld>
+      <active>true</active>
+      <codePool>local</codePool>
+    </Smartdata_Helloworld>
+  </modules>
+</config>

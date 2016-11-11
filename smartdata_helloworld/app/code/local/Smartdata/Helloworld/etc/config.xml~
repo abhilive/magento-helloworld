@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Smartdata_Helloworld>
+            <version>0.1.0</version>
+        </Smartdata_Helloworld>
+    </modules>  
+    <frontend>
+        <routers>
+            <Smartdata_Helloworld>
+                <use>standard</use>
+                <args>
+                    <module>Smartdata_Helloworld</module>
+                    <frontName>helloworld</frontName>
+                </args>
+            </Smartdata_Helloworld>
+        </routers>
+    </frontend>
+    <global>
+        <helpers>
+            <smartdata_helloworld>
+                <class>Smartdata_Helloworld_Helper</class>
+            </smartdata_helloworld>  
+        </helpers>
+    </global>
+    <admin>
+        <routers>
+            <smartdata_helloworld>
+                <use>admin</use>
+                <args>
+                    <module>Smartdata_Helloworld</module>
+                    <frontname>helloworld</frontname>
+                </args>
+            </smartdata_helloworld>
+        </routers>
+    </admin>
+</config>

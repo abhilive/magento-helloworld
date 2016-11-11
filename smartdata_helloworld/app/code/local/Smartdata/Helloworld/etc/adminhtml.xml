@@ -1,0 +1,31 @@
+<adminhtml>
+    <menu>
+        <menu1 translate="title" module="smartdata_helloworld">
+            <title>Smartdata Helloworld</title>
+            <sort_order>60</sort_order>
+            <children>
+                <menuitem1 module="smartdata_helloworld">
+                    <title>Menu item 1</title>
+                    <action>helloworld/adminhtml_custom/index</action>
+                </menuitem1>
+            </children>                
+        </menu1>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <menu1 translate="title" module="smartdata_helloworld">
+                        <title>Smartdata Helloworld</title>
+                        <sort_order>60</sort_order>
+                        <children>
+                            <menuitem1>
+                                <title>Menu item 1</title>
+                            </menuitem1>
+                        </children>
+                   </menu1>
+               </children>
+           </admin>
+       </resources>
+    </acl>
+</adminhtml> 

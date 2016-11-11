@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Smartdata_Helloworld>
+            <version>0.1.0</version>
+        </Smartdata_Helloworld>
+    </modules>  
+    <frontend>
+        <routers>
+            <smartdata_helloworld>
+                <use>standard</use>
+                <args>
+                    <module>Smartdata_Helloworld</module>
+                    <frontName>helloworld</frontName>
+                </args>
+            </smartdata_helloworld>
+        </routers>
+        <layout>
+            <updates>
+                <smartdata_helloworld>
+                    <file>helloworld.xml</file> <!-- layout file name-->
+                </smartdata_helloworld>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <helpers>
+            <smartdata_helloworld>
+                <class>Smartdata_Helloworld_Helper</class>
+            </smartdata_helloworld>  
+        </helpers>
+        <blocks>
+            <smartdata_helloworld>
+                <class>Smartdata_Helloworld_Block</class>
+            </smartdata_helloworld>
+        </blocks>
+        <models>
+            <smartdata_helloworld>
+                <class>Smartdata_Helloworld_Model</class>
+            </smartdata_helloworld>
+        </models>
+        <!--<events>
+            <core_block_abstract_to_html_before>
+                <observers>
+                    <smartdata_helloworld_observer>
+                        <type>singleton</type>
+                        <class>smartdata_helloworld/observer</class>
+                        <method>overwriteAddressForm</method>
+                    </smartdata_helloworld_observer>
+                </observers>
+            </core_block_abstract_to_html_before>
+        </events>-->
+    </global>
+    <admin>
+        <routers>
+            <!--There are two ways to define magento admin routers-->
+            <!--1. For This URL Will Be /helloworld/adminhtml_custom/-->
+            <smartdata_helloworld>
+                <use>admin</use>
+                <args>
+                    <module>Smartdata_Helloworld</module>
+                    <frontName>helloworld</frontName>
+                </args>
+            </smartdata_helloworld>
+            <!--2. For This URL Will Be /admin/helloworld/custom/-->
+            <!--<adminhtml>
+                <args>
+                    <modules>
+                        <helloworld before="Mage_Adminhtml">Smartdata_Helloworld_Adminhtml</helloworld>
+                    </modules>
+                </args>
+            </adminhtml>-->
+        </routers>
+    </admin>
+</config>
